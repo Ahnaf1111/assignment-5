@@ -17,10 +17,12 @@ document.getElementById('noakhali-donate-btn').addEventListener('click',function
 
     const div= document.createElement('div')
     div.innerHTML=`
-        <h4>${inpAmount} tk is donated for Noakhali flood situation in Bangladesh</h4>
-        <p>${new Date().toLocaleString()}</p>
+        <h4 class="text-xl font-semibold">${inpAmount} tk is donated for Noakhali flood situation in Bangladesh</h4>
+        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
     `
-            //  neeeddddddddddddd tooooooooo continueeeeeeeeeeeeee
+    div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
+    const historyShow=document.getElementById('history-show')
+    historyShow.insertBefore(div,historyShow.children[0])
 })
 // feni Donate Section
 document.getElementById('feni-donate-btn').addEventListener('click',function(){
@@ -37,6 +39,15 @@ document.getElementById('feni-donate-btn').addEventListener('click',function(){
     }
     document.getElementById('feni-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
+    // 
+    const div= document.createElement('div')
+    div.innerHTML=`
+        <h4 class="text-xl font-semibold">${inpAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
+        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
+    `
+    div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
+    const historyShow=document.getElementById('history-show')
+    historyShow.insertBefore(div,historyShow.children[0])
 })
 // quota movement Section
 document.getElementById('quota-donate-btn').addEventListener('click',function(){
@@ -53,6 +64,15 @@ document.getElementById('quota-donate-btn').addEventListener('click',function(){
     }
     document.getElementById('quota-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
+    // 
+    const div= document.createElement('div')
+    div.innerHTML=`
+        <h4 class="text-xl font-semibold">${inpAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
+        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
+    `
+    div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
+    const historyShow=document.getElementById('history-show')
+    historyShow.insertBefore(div,historyShow.children[0])
 })
 
 // history and donation btn clicking
@@ -63,6 +83,8 @@ document.getElementById('history-btn').addEventListener('click',function(){
     donationBtn.className=`bg-white border-2 border-gray-400 text-gray-500 btn`
     const hideDonate= document.getElementById('show-donate');
     hideDonate.classList.add('hidden')
+    const hideHistorySec=document.getElementById('history-show')
+    hideHistorySec.classList.remove('hidden')
 })
 document.getElementById('donation-btn').addEventListener('click',function(){
     this.className=`bg-lightGreen btn`
@@ -71,4 +93,6 @@ document.getElementById('donation-btn').addEventListener('click',function(){
     donationBtn.className=`bg-white border-2 border-gray-400 text-gray-500 btn`
     const hideDonate= document.getElementById('show-donate');
     hideDonate.classList.remove('hidden')
+    const hideHistorySec=document.getElementById('history-show')
+    hideHistorySec.classList.add('hidden')
 })
