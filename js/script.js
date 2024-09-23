@@ -47,3 +47,17 @@ document.getElementById('quota-donate-btn').addEventListener('click',function(){
     document.getElementById('quota-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
 })
+
+// history and donation btn clicking
+document.getElementById('history-btn').addEventListener('click',function(){
+    this.className=`bg-lightGreen btn`
+    const donationBtn= document.getElementById('donation-btn')
+    donationBtn.classList.remove('bg-lightGreen')
+    donationBtn.className=`bg-white border-2 border-gray-400 text-gray-500 btn`
+})
+document.getElementById('donation-btn').addEventListener('click',function(){
+    this.className=`bg-lightGreen btn`
+    const donationBtn= document.getElementById('history-btn')
+    donationBtn.classList.remove('bg-lightGreen')
+    donationBtn.className=`bg-white border-2 border-gray-400 text-gray-500 btn`
+})
