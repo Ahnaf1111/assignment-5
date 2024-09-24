@@ -106,5 +106,7 @@ document.getElementById('donation-btn').addEventListener('click',function(){
     hideHistorySec.classList.add('hidden')
 })
 // blogbtn
-
+document.getElementById('blog-btn').addEventListener('click',function(){
+    window.location.href='blog.html'
+})
 
