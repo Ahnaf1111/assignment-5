@@ -96,3 +96,11 @@ document.getElementById('donation-btn').addEventListener('click',function(){
     const hideHistorySec=document.getElementById('history-show')
     hideHistorySec.classList.add('hidden')
 })
+// blogbtn
+document.getElementById('blog-btn').addEventListener('click',function(){
+    window.location.href='../blog.html'
+})
+// homeBtn
+document.getElementById('home-btn').addEventListener('click', function() {
+    window.location.href = '../index.html';
+})
