@@ -20,7 +20,7 @@ document.getElementById('noakhali-donate-btn').addEventListener('click',function
     const div= document.createElement('div')
     div.innerHTML=`
         <h4 class="text-xl font-semibold">${inpAmount} tk is donated for Noakhali flood situation in Bangladesh</h4>
-        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
+        <p class="text-sm font-light">date: ${new Date().toString()}</p>
     `
     div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
     const historyShow=document.getElementById('history-show')
@@ -49,7 +49,7 @@ document.getElementById('feni-donate-btn').addEventListener('click',function(){
     const div= document.createElement('div')
     div.innerHTML=`
         <h4 class="text-xl font-semibold">${inpAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
-        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
+        <p class="text-sm font-light">date: ${new Date().toString()}</p>
     `
     div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
     const historyShow=document.getElementById('history-show')
@@ -77,7 +77,7 @@ document.getElementById('quota-donate-btn').addEventListener('click',function(){
     const div= document.createElement('div')
     div.innerHTML=`
         <h4 class="text-xl font-semibold">${inpAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
-        <p class="text-sm font-light">date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time)</p>
+        <p class="text-sm font-light">date: ${new Date().toString()}</p>
     `
     div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
     const historyShow=document.getElementById('history-show')
