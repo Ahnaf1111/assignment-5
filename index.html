@@ -105,7 +105,7 @@
               id="noakhali-inp"
               class="block border-2 border-[#1111111A] outline-none w-full py-3 pl-8"
               placeholder="Write Donation Amount"
-              type="text"
+              type="number"
             />
             <button
               id="noakhali-donate-btn"
@@ -113,7 +113,26 @@
             >
               Donate Now
             </button>
+            <!-- modal -->
+             <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="">open modal</button> -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box flex flex-col items-center">
+    <h3 class="text-5xl font-bold mb-4">Congrats!</h3>
+    <img src="assets/coin.png" alt="">
+    <p class="py-4">You have donated for humankind</p>
+    <h4 class="text-xl font-semibold">successful</h4>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+             <!-- modal -->
           </div>
+
         </section>
         <!-- feni section -->
         <section
@@ -150,7 +169,7 @@
               id="feni-inp"
               class="block border-2 border-[#1111111A] outline-none w-full py-3 pl-8"
               placeholder="Write Donation Amount"
-              type="text"
+              type="number"
             />
             <button
               id="feni-donate-btn"

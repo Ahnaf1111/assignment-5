@@ -9,11 +9,13 @@ document.getElementById('noakhali-donate-btn').addEventListener('click',function
     if(updateBalance<0){
         return alert('insufficient Balance')
     }
-    if(isNaN(inpAmount)||inpAmount<0){
+    if(isNaN(inpAmount)||inpAmount<0||typeof inpAmount!=="number"){
         return alert('Invalid Input')
     }
     document.getElementById('noakhali-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
+    document.getElementById('noakhali-inp').value='';
+    my_modal_1.showModal()
 
     const div= document.createElement('div')
     div.innerHTML=`
@@ -23,6 +25,7 @@ document.getElementById('noakhali-donate-btn').addEventListener('click',function
     div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
     const historyShow=document.getElementById('history-show')
     historyShow.insertBefore(div,historyShow.children[0])
+
 })
 // feni Donate Section
 document.getElementById('feni-donate-btn').addEventListener('click',function(){
@@ -39,6 +42,9 @@ document.getElementById('feni-donate-btn').addEventListener('click',function(){
     }
     document.getElementById('feni-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
+    document.getElementById('feni-inp').value='';
+    my_modal_1.showModal()
+    
     // 
     const div= document.createElement('div')
     div.innerHTML=`
@@ -48,6 +54,7 @@ document.getElementById('feni-donate-btn').addEventListener('click',function(){
     div.className=`border border-gray-500 p-5 rounded-lg mb-8`;
     const historyShow=document.getElementById('history-show')
     historyShow.insertBefore(div,historyShow.children[0])
+
 })
 // quota movement Section
 document.getElementById('quota-donate-btn').addEventListener('click',function(){
@@ -64,6 +71,8 @@ document.getElementById('quota-donate-btn').addEventListener('click',function(){
     }
     document.getElementById('quota-donation-amount').innerText=updateAmount;
     document.getElementById('balance').innerText=updateBalance;
+    document.getElementById('quota-inp').value='';
+    my_modal_1.showModal()
     // 
     const div= document.createElement('div')
     div.innerHTML=`
@@ -100,7 +109,4 @@ document.getElementById('donation-btn').addEventListener('click',function(){
 document.getElementById('blog-btn').addEventListener('click',function(){
     window.location.href='../blog.html'
 })
-// homeBtn
-document.getElementById('home-btn').addEventListener('click', function() {
-    window.location.href = '../index.html';
-})
+
