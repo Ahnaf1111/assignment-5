@@ -107,6 +107,6 @@ document.getElementById('donation-btn').addEventListener('click',function(){
 })
 // blogbtn
 document.getElementById('blog-btn').addEventListener('click',function(){
-    window.location.href='../blog.html'
+    window.location.href='ahnaf1111.github.io/blog.html'
 })
 
