@@ -9,7 +9,7 @@ document.getElementById('noakhali-donate-btn').addEventListener('click',function
     if(updateBalance<0){
         return alert('insufficient Balance')
     }
-    if(isNaN(inpAmount)||inpAmount<0||typeof inpAmount!=="number"){
+    if(isNaN(inpAmount)||inpAmount<=0||typeof inpAmount!=="number"){
         return alert('Invalid Input')
     }
     document.getElementById('noakhali-donation-amount').innerText=updateAmount;
@@ -37,7 +37,7 @@ document.getElementById('feni-donate-btn').addEventListener('click',function(){
     if(updateBalance<0){
         return alert('insufficient Balance')
     }
-    if(isNaN(inpAmount)||inpAmount<0){
+    if(isNaN(inpAmount)||inpAmount<=0){
         return alert('Invalid Input')
     }
     document.getElementById('feni-donation-amount').innerText=updateAmount;
@@ -66,7 +66,7 @@ document.getElementById('quota-donate-btn').addEventListener('click',function(){
     if(updateBalance<0){
         return alert('insufficient Balance')
     }
-    if(isNaN(inpAmount)||inpAmount<0){
+    if(isNaN(inpAmount)||inpAmount<=0){
         return alert('Invalid Input')
     }
     document.getElementById('quota-donation-amount').innerText=updateAmount;
